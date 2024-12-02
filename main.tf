@@ -1,6 +1,6 @@
 module "vm" {
   source  = "app.terraform.io/cloudbrokeraz/virtual-machine/vsphere"
-  version = "~> 1.4"
+  version = "0.1"
 
   template          = data.hcp_packer_artifact.this.external_identifier
   datacenter        = var.site
