@@ -6,3 +6,13 @@
 /* provider "vault" {
   # using environment variables
 } */
+
+
+provider "vault" {
+  skip_child_token = true
+}
+
+provider "vsphere" {
+  user     = "${data.vault_ldap_static_credentials.vm_builder.username}@hashicorp.local"
+  password = data.vault_ldap_static_credentials.vm_builder.password
+}
